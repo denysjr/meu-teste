@@ -17,8 +17,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-
+          
 
       - name: construção da imagem docker
         run: echo "executando o comando docker build"
