@@ -32,8 +32,21 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ci]
     steps:
+
+      - name: autenticar no docker hub
+        uses: actions/checkout@v4  
+      
       - name: autenticar na AWS
-        run: echo "executando o comando aws configure"
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2 
+
+
+
+
+
       - name: configurar o kubectl (kube config)
         run: echo "executando o comandndo eks update-kubeconfig"
       - name: aplicar os manifestos ou fazer deploy, ou executar o kubectl apply
