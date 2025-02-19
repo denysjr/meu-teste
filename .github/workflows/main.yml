@@ -44,7 +44,7 @@ jobs:
           aws-region: us-east-2
 
       - name: configurar o kubectl (kube config)
-        run: aws eks --region us-east-2 update-kubeconfig --name cluster_aula_eks
+        run: aws eks update-kubeconfig --name cluster_aula_eks
 
         
       - name: aplicar os manifestos ou fazer deploy, ou executar o kubectl apply
