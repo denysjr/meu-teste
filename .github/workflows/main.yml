@@ -45,5 +45,8 @@ jobs:
 
       - name: configurar o kubectl (kube config)
         run: aws eks update-kubeconfig --name cluster_aula_eks
+
+
+        
       - name: aplicar os manifestos ou fazer deploy, ou executar o kubectl apply
         run: echo "executando o comando kubectl apply"
