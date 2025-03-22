@@ -1,7 +1,8 @@
-# Fake Shop
+# lojinha virtual 
 
 
-## Variável de Ambiente
+## variáveis. Comunicação com aplicação do banco 
+
 DB_HOST	=> Host do banco de dados PostgreSQL.
 
 DB_USER => Nome do usuário do banco de dados PostgreSQL.
